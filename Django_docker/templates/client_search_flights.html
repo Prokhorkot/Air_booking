@@ -1,0 +1,55 @@
+<div class="main_div">
+    <form action="#", method="get">
+        <link rel="stylesheet" href="/static/css/main_menu.css" />
+        
+
+        <p>Departure</p>
+        <div>
+            <p>Input airport code or city to depart<input class="oneline" type="text" placeholder="DME or Moscow" pattern="^[a-zA-Z]+$" name="dep" value="{{dep_code}}" required></p>
+        </div>
+        <p>Arrival</p>
+        <div>
+            <p>Input airport code or city to arrive<input class="oneline" type="text" placeholder="DME or Moscow" pattern="^[a-zA-Z]+$" name="arr" value="{{arr_code}}" required></p>
+            <p>Date: <input type="date" class="oneline" name="dep_date" value="{{dep_date}}" required></p>
+            <p>Number of passengers: <input type="text" class="oneline" name="passengers" placeholder="1-9" value="{{passengers}}" pattern="^[1-9]$" required></p>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <form method="get">
+        <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+        {% for flight in flights %}
+
+            <div class="flight">
+                <p>Flight number: {{flight.flight_number}}</p>
+                <br>
+                <p>
+                    {{flight.dep_code}} ({{flight.dep_name}}),
+                    {{flight.dep_city}},
+                    {{flight.dep_country}}
+                </p>
+                <p>
+                    Departs at {{flight.dep_date}} {{flight.local_dep_time}}
+                </p>
+                <br>
+                <p>
+                    {{flight.arr_code}} ({{flight.arr_name}}),
+                    {{flight.arr_city}},
+                    {{flight.arr_country}}
+                </p>
+                <p>
+                    Arrives at {{flight.arr_date}} {{flight.local_arr_time}}
+                </p>
+                <br>
+                <p>Class: {{flight.fare_basis}}</p>
+                <p class="price"> Price: {{flight.cost}}</p>
+
+                <a href="{{url_for('client_book_flights', flight=flight.to_json(), passengers=passengers)}}">
+                    <button type="button">Buy tickets</button>
+                </a>
+            </div>
+
+        {% endfor %}
+    </form>
+</div>

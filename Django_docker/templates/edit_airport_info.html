@@ -1,0 +1,33 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+    <form method="get">
+        <p>Airport IATA code:<input name="code" type="text" class="oneline" placeholder="DME" pattern="[A-Z]{3}"></p>
+        <button type="submit">Search airport</button>
+    </form>
+
+    <form method="post">
+        <p class="incorrect_input">{{invalid}}</p>
+        {% if airport %}
+            <p>Airport IATA code:<input name="code" type="text" class="oneline" placeholder="DME" pattern="[A-Z]{3}"
+                value="{{airport.airport_code}}"></p>
+
+            <p>Airport name: <input name="name" type="text" class="oneline" placeholder="Domodedovo International Airport"
+                value="{{airport.airport_name}}"></p>
+
+            <p>Airport country: <input name="country" type="text" class="oneline" placeholder="Russia" pattern="[A-Za-z]{4,}"
+                value="{{airport.country}}"></p>
+
+            <p>Airport city: <input name="city" type="text" class="oneline" placeholder="Moscow" pattern="[A-Za-z]{2,}"
+                value="{{airport.city}}"></p>
+
+            <p>Hour timezone UTC: <input name="hours" type="text" class="oneline" placeholder="+3" pattern="[\-\+][0-9]$|[\-\+]1[0-2]$"
+                value="{{airport.timezone_hours}}"></p>
+
+            <p>Minutes timezone: <input name="minutes" type="text" class="oneline" placeholder="30" pattern="0$|[134][05]$" 
+                value="{{airport.timezone_minutes}}"></p>
+            <br>
+            <button type="submit">Submit changes</button>
+        {% endif %}
+    </form>
+</div>

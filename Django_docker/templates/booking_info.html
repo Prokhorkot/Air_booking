@@ -1,0 +1,25 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css">
+
+    <form method="get">
+        <p class="incorrect_input">{{invalid}}</p>
+        <p>Enter your booking number: <input name="pnr" type="text" class="oneline" placeholder="AAA111" pattern="^[A-Z1-9]{6}" value="{{pnr}}" required></p>
+        <br>
+        <button type="submit">Search</button>
+    </form>
+
+    <form method="get">
+        {% for t in tickets %}
+            <div class="flight">
+                <p>Flight number: {{t.flight_number}}</p>
+                <p>Ticket number: {{t.ticket_number}}</p>
+                <p>{{t.dep_code}}, {{t.dep_city}}, {{t.dep_country}} &#8594 {{t.arr_code}}, {{t.arr_city}}, {{t.arr_country}}</p>
+                <p>Dates: {{t.dep_date}} {{t.dep_time}} &#8594 {{t.arr_date}} {{t.arr_time}}</p>
+                <p>Class: {{t.ticket_class}}</p>
+                <p>Status: {{t.status}}</p>
+                <p>Baggage: {{t.baggage}}</p>
+                <p>Passenger: {{t.passenger_name}}</p>
+            </div>
+        {% endfor %}
+    </form>
+</div>

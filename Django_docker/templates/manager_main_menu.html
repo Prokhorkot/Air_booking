@@ -1,0 +1,25 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+    {% if invalid %}
+    <p class="incorrect_input">{{invalid}}</p>
+    {% endif %}
+
+    <a href="{{url_for('search_flights')}}">
+        <button type="buton">Search flights</button>
+    </a>
+    <br>
+    <a href="{{url_for('edit_passenger')}}">
+        <button type="buton">Edit passenger info</button>
+    </a>
+    <br>
+    <a href="{{url_for('booking_info')}}">
+        <button type="button">Booking info</button>
+    </a>
+    <form action="#" method="post">
+        <br>
+        <a href="{{url_for('logout')}}">
+            <button class="ccl_btn" type="button">Logout</button>
+        </a>
+    </form>
+</div>

@@ -1,0 +1,191 @@
+.main_div {
+  width: 30%;
+  min-width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  background-color: #ccc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 20px;
+}
+
+div.form {
+  display: block;
+  text-align: center;
+}
+
+
+/* Full-width inputs */
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+input.oneline {
+  width: auto;
+}
+
+div.flight {
+  background-color: aliceblue;
+  color: darkslategrey;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 20px;
+  padding: 4%;
+  margin-top: 20px;
+}
+
+p.price {
+  font-size: large;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: medium;
+}
+
+button {
+  width: 100%;
+  border-radius: 30px;
+}
+
+input:invalid {
+  background-color: lightsalmon;
+}
+
+
+.container {
+  padding: 5%;
+}
+
+p.incorrect_input {
+  color: red;
+}
+
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+button.ccl_btn {
+  background-color: red;
+  width: 50%;
+  margin: auto;
+}
+
+div.rg_btn {
+  text-align: right;
+}
+
+div.rg_btn button {
+  background-color: lightskyblue;
+  color: black;
+  width: 30%;
+  margin: auto;
+}
+
+.select-dropdown-big,
+.select-dropdown-big * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 70%;
+}
+
+.select-dropdown-big {
+  position: relative;
+  background-color: #E6E6E6;
+  border-radius: 8px;
+}
+
+.select-dropdown-big select {
+  font-size: medium;
+  font-weight: normal;
+  max-width: 100%;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select-dropdown-big select:active,
+.select-dropdown-big select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select-dropdown-big:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+
+.select-dropdown,
+.select-dropdown * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 10%;
+}
+
+.select-dropdown {
+  position: relative;
+  background-color: #E6E6E6;
+  border-radius: 8px;
+}
+
+.select-dropdown select {
+  font-size: medium;
+  font-weight: normal;
+  max-width: 100%;
+  width: 100%;
+  padding: 8px 24px 8px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select-dropdown select:active,
+.select-dropdown select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.select-dropdown:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}

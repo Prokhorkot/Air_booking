@@ -1,0 +1,15 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css">
+
+    <p>Thank you for choosing our airlines!</p>
+    <p class="incorrect_input">{{invalid}}</p>
+    {% if pnr %}
+        <div class="flight">
+            <p>Your Booking number: {{pnr}}</p>
+        </div>
+    {% endif %}
+
+    <a href="{{url_for('main_menu')}}">
+        <button type="button">Back to main menu</button>
+    </a>
+</div>

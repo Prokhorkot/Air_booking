@@ -1,0 +1,15 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+    <form method="post">
+        <p class="incorrect_input">{{invalid}}</p>
+        <p>Airport IATA code:<input name="code" type="text" class="oneline" placeholder="DME" pattern="[A-Z]{3}"></p>
+        <p>Airport name: <input name="name" type="text" class="oneline" placeholder="Domodedovo International Airport"></p>
+        <p>Airport country: <input name="country" type="text" class="oneline" placeholder="Russia" pattern="[A-Za-z]{4,}"></p>
+        <p>Airport city: <input name="city" type="text" class="oneline" placeholder="Moscow" pattern="[A-Za-z]{2,}"></p>
+        <p>Hour timezone UTC: <input name="hours" type="text" class="oneline" placeholder="+3" pattern="[\-\+][0-9]$|[\-\+]1[0-2]$"></p>
+        <p>Minutes timezone: <input name="minutes" type="text" class="oneline" placeholder="30" pattern="0$|[134][05]$" value="0"></p>
+        <br>
+        <button type="submit">Add airport</button>
+    </form>
+</div>

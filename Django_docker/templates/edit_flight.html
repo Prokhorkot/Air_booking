@@ -1,0 +1,23 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+    <form method="post">
+        <p class="incorrect_input">{{invalid}}</p>
+        {% if flight %}
+
+        <div class="flight">
+            <p>Flight number {{flight.flight_number}}</p>
+            <p>From {{flight.dep_code}} ({{flight.dep_name}}), {{flight.dep_city}}, {{flight.dep_country}}</p>
+            <p>To {{flight.arr_code}} ({{flight.arr_name}}), {{flight.arr_city}}, {{flight.arr_country}}</p>
+            <p>{{flight.dep_date}} ({{flight.local_dep_time}}) &#8594 {{flight.arr_date}} ({{flight.local_arr_time}})</p>
+        </div>
+        <p>Departure date and time <input class="oneline" name="dep_datetime" type="datetime-local"
+                min="2022-12-13T00:00"></p>
+        <p>Arrival date and time <input class="oneline" name="arr_datetime" type="datetime-local"
+                min="2022-12-13T00:00"></p>
+        <br>
+        <button type="submit">Submit changes</button>
+
+        {% endif %}
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="main_div">
+    <form method="post">
+        <link rel="stylesheet" href="/static/css/main_menu.css" />
+
+        <div class="container">
+            <p class="incorrect_input">{{invalid}}</p>
+
+            <div class="rg_btn">
+                <a href="{{url_for('register')}}">
+                    <button class="rg_btn" type="button">Register</button>
+                </a>
+            </div>
+
+            <div class="input">
+                <p>Login<input type="text" placeholder="Enter Username" name="uname" required></p>
+            </div>
+
+            <div class="input">
+                <p>Password<input type="password" placeholder="Enter Password" name="psw" required></p>
+            </div>
+
+            <button class type="submit">Login</button>
+        </div>
+    </form>
+</div>

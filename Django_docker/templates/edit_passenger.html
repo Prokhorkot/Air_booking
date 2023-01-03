@@ -1,0 +1,37 @@
+<div class="main_div">
+    <link rel="stylesheet" href="/static/css/main_menu.css">
+    <form method="get">
+        <p>Passport info: <input name="passport" class="oneline" type="text" placeholder="1234 567890" pattern="^[0-9]{4} [0-9]{6}$" required></p>
+        {% if login %}
+            <p>User login: <input name="login" class="oneline" type="text" placeholder="login" required></p>
+        {% endif %}
+
+        <button type="submit">Search passenger</button>
+    </form>
+
+    <form method="post">
+        <div>
+            <p class="incorrect_input">{{invalid}}</p>
+            {% if passenger %}
+                <p>Passport seria: <input name="seria" class="oneline" type="text" placeholder="1234" pattern="[0-9]{4}"
+                        value="{{passenger.passport_seria}}"></p>
+
+                <p>Passport number: <input name="number" class="oneline" type="text", placeholder="123456" pattern="[0-9]{6}"
+                        value="{{passenger.passport_number}}"></p>
+
+                <p>Full name: <input name="name" class="oneline" type="text" placeholder="Иванов Иван Иванович" pattern="^[А-Яа-яЁё\s]+$"
+                        value="{{passenger.full_name}}"></p>
+
+                <p>Sex: <select name="sex">
+                    <option selected value="M">M</option>
+                    <option value="F">F</option>
+                </select></p>
+
+                <p>Ctizenship: <input name="citizenship" class="oneline" type="text" placeholder="Russia" pattern="^[A-Za-z\s]+$"
+                    value="{{passenger.citizenship}}"></p>
+                <br>
+                <button type="submit">Submit</button>
+            {% endif %}
+        </div>
+    </form>
+</div>
