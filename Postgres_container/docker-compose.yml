@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+ postgres:
+  container_name: postgres-container
+  image: postgres
+  restart: always
+  environment: 
+   POSTGRES_DB: "air_booking"
+   POSTGRES_USER: ${POSTGRES_USERNAME}
+   POSTGRES_PASSWORD: ${PASSWORD}
+  ports:
+   - "5432:5432"
